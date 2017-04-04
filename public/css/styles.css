@@ -1,0 +1,49 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: #191414;
+  margin: 0;
+  padding: 0;
+}
+
+#titlebar {
+  background-color: #1DB954;
+  padding: 20px 40px;
+  margin-bottom: 40px;
+  font-family: 'Marck Script', cursive;
+}
+
+#titlebar h1 {
+  margin: 0;
+  padding: 0;
+  font-size: 40px;
+}
+
+#songlist {
+  padding: 0 40px;
+}
+
+.played {
+  margin-right: 20px;
+  align-content: center;
+  background: #fff;
+  margin-bottom: 40px;
+  padding: 20px;
+  display: inline-block;
+  flex-grow: 1;
+  font-family: 'Roboto', sans-serif;
+}
+
+p.song {
+  font-size: 24px;
+  margin-bottom: 0;
+}
+
+p.artist {
+  font-size: 18px;
+  color: #1DB954;
+  margin-top: 5px;
+}
+
