@@ -1,3 +1,5 @@
+var Song = require('./Song');
+
 var Spotimy = function(ui){
   this.clientId = "24f59f279b824fe9891b49c10c9e6130";
   this.redirect_uri = "http://spotimy.com:3000";
@@ -61,3 +63,5 @@ Spotimy.prototype = {
     request.send();
   }
 };
+
+module.exports = Spotimy;

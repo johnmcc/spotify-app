@@ -10,3 +10,5 @@ Song.prototype = {
 
   }
 };
+
+module.exports = Song;

@@ -18,3 +18,5 @@ Ui.prototype = {
     }
   }
 };
+
+module.exports = Ui;
