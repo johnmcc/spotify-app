@@ -6,7 +6,7 @@ export default class Song extends React.Component {
   }
 
   getArtist(){
-    return this.props.track.artists[0].name;
+    return this.props.track.artists.map(artist => { return artist.name }).join(" / ");
   }
 
   render(){
