@@ -4,16 +4,11 @@ import ReactDOM from 'react-dom';
 import Spotimy from './Spotimy';
 
 import BeginBtn from './components/BeginBtn.jsx';
-import SongList from './components/SongList.jsx';
+import App from './components/App.jsx';
 
 window.onload = function(){
   var spotimy = new Spotimy();
-  
-  if(spotimy.accessToken){
-    var element = <SongList url={spotimy.getRecentlyPlayedUrl()} token={spotimy.accessToken} />;
-  }else{
-    var element = <BeginBtn location={spotimy.getAuthURL()} />
-  }
+  var element = <App spotimy={spotimy} />;
 
   ReactDOM.render(
     element,
