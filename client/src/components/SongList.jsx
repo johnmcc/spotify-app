@@ -28,8 +28,8 @@ export default class SongList extends React.Component {
   render(){
     var rows = [];
     for(let [index, song] of this.state.songs.entries()){
-      rows.push(<Song key={index} track={song.track} />);
+      rows.push(<Song onClick={ this.props.onClick } key={index} track={song.track} />);
     }
-    return <div>{rows}</div>
+    return <div id="songList">{rows}</div>
   }
 }

@@ -39,11 +39,12 @@ body {
   font-family: 'Marck Script', cursive;
 }
 
-#songlist {
-  padding: 0 40px;
+#infoBox {
+  background: #fff;
 }
 
 .played {
+  cursor: pointer;
   margin-right: 20px;
   align-content: center;
   background: #fff;
