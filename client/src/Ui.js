@@ -4,7 +4,7 @@ var Ui = function(){
 
 Ui.prototype = {
   populate: function(songs){
-    var wrapper = document.getElementById("songlist");
+    var wrapper = document.getElementById("app");
     for(var song of songs){
       var div = document.createElement("div");
       div.className = "played";
