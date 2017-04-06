@@ -41,7 +41,48 @@ body {
 
 #infoBox {
   background: #fff;
+  margin-bottom: 40px;
+  font-family: 'Roboto', sans-serif;
 }
+
+#infoBox:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+#infoBox img {
+  width: 300px;
+  float: right;
+}
+
+#infoBox #infoTextWrap {
+  padding: 20px;
+  text-align: left;
+  float: left;
+  width: calc(100% - 300px);
+}
+
+#infoBox h2 {
+  font-family: 'Marck Script', cursive;
+  color: #1DB954;
+  font-size: 36px;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+#infoBox h3 {
+  margin-top: 15px;
+  margin-bottom: 5px;
+  font-weight: normal;
+  font-size: 16px;
+}
+
+#infoBox h4 {
+  font-weight: normal;
+  margin-top: 0;
+  margin-bottom: 0;
+} 
 
 .played {
   cursor: pointer;

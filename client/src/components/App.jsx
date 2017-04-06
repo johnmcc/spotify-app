@@ -16,6 +16,7 @@ export default class App extends React.Component {
 
   setSelectedSong(song){
     this.setState({ selectedSong: song });
+    window.scrollTo(0, 0);
   }
 
   render(){
