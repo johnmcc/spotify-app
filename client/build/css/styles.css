@@ -94,6 +94,12 @@ body {
   display: inline-block;
   flex-grow: 1;
   font-family: 'Roboto', sans-serif;
+  opacity: 0.8;
+  transition: 0.2s all ease-in;
+}
+
+.played:hover {
+  opacity: 1;
 }
 
 p.song {
