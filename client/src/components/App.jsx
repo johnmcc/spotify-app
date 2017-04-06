@@ -8,14 +8,15 @@ export default class App extends React.Component {
     super(props);
 
     this.state = {
-      selectedSong: null
+      selectedSong: null,
+      selectedSongInfo: null
     };
 
     this.setSelectedSong = this.setSelectedSong.bind(this);
   }
 
-  setSelectedSong(song){
-    this.setState({ selectedSong: song });
+  setSelectedSong(song, songInfo){
+    this.setState({ selectedSong: song, selectedSongInfo: songInfo });
     window.scrollTo(0, 0);
   }
 
@@ -23,15 +24,16 @@ export default class App extends React.Component {
     if(this.props.spotimy.accessToken){
       var element = (
         <div id="infoWrapper">
-          <InfoBox selectedSong={ this.state.selectedSong } />
+          <InfoBox 
+            selectedSong={ this.state.selectedSong } 
+            selectedSongInfo={ this.state.selectedSongInfo } />
           <SongList
-            onClick={ this.setSelectedSong }
-            url={ this.props.spotimy.getRecentlyPlayedUrl() } 
-            token={ this.props.spotimy.accessToken } />
+            spotimy={ this.props.spotimy }
+            onClick={ this.setSelectedSong } />
         </div>
       );
     }else{
-       var element = <BeginBtn location={this.props.spotimy.getAuthURL()} />
+      var element = <BeginBtn location={this.props.spotimy.getAuthURL()} />
     }
     
     return element;

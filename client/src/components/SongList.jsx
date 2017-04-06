@@ -6,7 +6,8 @@ export default class SongList extends React.Component {
     super(props);
 
     this.state = {
-      songs: []
+      songs: [],
+      audio_features: []
     }
   }
 
@@ -14,13 +15,21 @@ export default class SongList extends React.Component {
     var options = { 
       method: "GET",
       headers: {
-        "Authorization": "Bearer " + this.props.token
+        "Authorization": "Bearer " + this.props.spotimy.accessToken
       }
     };
 
-    fetch(this.props.url, options).then(response => {
+    fetch(this.props.spotimy.getRecentlyPlayedUrl(), options).then(response => {
       response.json().then(data => {
         this.setState({songs: data.items});
+
+        var ids = data.items.map(item => { return item.track.id }).join(",");
+        
+        fetch(this.props.spotimy.getSongInfoUrl(ids), options).then(response => {
+          response.json().then(data => {
+            this.setState({audio_features: data.audio_features});
+          })
+        });
       });
     });
   }
@@ -28,7 +37,14 @@ export default class SongList extends React.Component {
   render(){
     var rows = [];
     for(let [index, song] of this.state.songs.entries()){
-      rows.push(<Song onClick={ this.props.onClick } key={index} track={song.track} />);
+      rows.push(
+        <Song 
+              key={ index }
+              spotimy={ this.props.spotimy } 
+              onClick={ this.props.onClick } 
+              audio_features={ this.state.audio_features[index] } 
+              track={ song.track } />
+      );
     }
     return <div id="songList">{rows}</div>
   }

@@ -12,7 +12,7 @@ export default class Song extends React.Component {
   }
 
   handleClick(){
-    this.props.onClick(this.props.track);
+    this.props.onClick(this.props.track, this.props.audio_features);
   }
 
   render(){

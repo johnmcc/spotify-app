@@ -20,6 +20,10 @@ Spotimy.prototype = {
     var url = "https://api.spotify.com/v1/me/player/recently-played";
     return url;
   },
+  getSongInfoUrl: function(ids){
+    var url = "https://api.spotify.com/v1/audio-features/?ids=" + ids;
+    return url;
+  },
   getHashParams: function() {
     var hashParams = {};
     var e, r = /([^&;=]+)=?([^&;]*)/g,
