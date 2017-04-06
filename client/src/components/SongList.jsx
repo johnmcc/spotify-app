@@ -22,13 +22,13 @@ export default class SongList extends React.Component {
     fetch(this.props.spotimy.getRecentlyPlayedUrl(), options).then(response => {
       response.json().then(data => {
         this.setState({songs: data.items});
-
         var ids = data.items.map(item => { return item.track.id }).join(",");
-        
+        return ids;
+      }).then(ids => {
         fetch(this.props.spotimy.getSongInfoUrl(ids), options).then(response => {
           response.json().then(data => {
             this.setState({audio_features: data.audio_features});
-          })
+          });
         });
       });
     });
