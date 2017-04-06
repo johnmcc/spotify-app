@@ -39,11 +39,11 @@ export default class SongList extends React.Component {
     for(let [index, song] of this.state.songs.entries()){
       rows.push(
         <Song 
-              key={ index }
-              spotimy={ this.props.spotimy } 
-              onClick={ this.props.onClick } 
-              audio_features={ this.state.audio_features[index] } 
-              track={ song.track } />
+          key={ index }
+          spotimy={ this.props.spotimy } 
+          onClick={ this.props.onClick } 
+          audio_features={ this.state.audio_features[index] } 
+          track={ song.track } />
       );
     }
     return <div id="songList">{rows}</div>
