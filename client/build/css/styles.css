@@ -49,6 +49,14 @@ body {
   content: "";
   display: table;
   clear: both;
+  content: "";
+  opacity: 0.5;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;   
 }
 
 #infoBox img {
@@ -59,8 +67,6 @@ body {
 #infoBox #infoTextWrap {
   padding: 20px;
   text-align: left;
-  float: left;
-  width: calc(100% - 300px);
 }
 
 #infoBox h2 {

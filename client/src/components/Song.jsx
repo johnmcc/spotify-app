@@ -1,26 +1,20 @@
 import React from 'react';
 
-export default class Song extends React.Component {
-  constructor(props){
-    super(props);
+const Song = ({track, audio_features, onClick}) => {
+  const getArtist = () => {
+    return track.artists.map(artist => { return artist.name }).join(" / ");
+  };
 
-    this.handleClick = this.handleClick.bind(this);
-  }
+  const handleClick = () => {
+    onClick(track, audio_features);
+  };
 
-  getArtist(){
-    return this.props.track.artists.map(artist => { return artist.name }).join(" / ");
-  }
+  return (
+    <div className="played" onClick={ handleClick }>
+      <p className="song">{ track.name }</p>
+      <p className="artist">{ getArtist() }</p>
+    </div> 
+  );
+};
 
-  handleClick(){
-    this.props.onClick(this.props.track, this.props.audio_features);
-  }
-
-  render(){
-    return (
-      <div className="played" onClick={ this.handleClick }>
-        <p className="song">{ this.props.track.name }</p>
-        <p className="artist">{ this.getArtist() }</p>
-      </div> 
-    );
-  }
-}
+export default Song;

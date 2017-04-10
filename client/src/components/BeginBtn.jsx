@@ -1,18 +1,13 @@
 import React from 'react';
 
-export default class BeginBtn extends React.Component {
-  constructor(props){
-    super(props);
-    this.getToken = this.getToken.bind(this);
+const BeginBtn = ({location}) => {
+  const getToken = () => {
+    window.location = location;
   }
 
-  getToken(){
-    window.location = this.props.location;
-  }
+  return (
+    <button onClick={ getToken }>Begin</button>
+  )
+};
 
-  render() {
-    return (
-      <button onClick={ this.getToken }>Begin</button>
-    )
-  }
-}
+export default BeginBtn;
