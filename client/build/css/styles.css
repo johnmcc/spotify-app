@@ -22,7 +22,7 @@ body {
 }
 
 #app {
-  padding: 0 40px;
+  padding: 0;
   text-align: center;
 }
 
@@ -37,6 +37,10 @@ body {
   background: #000;
   font-size: 36px;
   font-family: 'Marck Script', cursive;
+}
+
+#infoWrapper {
+  padding: 0 20px;
 }
 
 #infoBox {
