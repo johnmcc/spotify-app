@@ -23,28 +23,27 @@ export default class App extends React.Component {
 
   render(){
     if(this.props.spotimy.accessToken){
-      var element = (
-        <div id="appWrapper">
-          <Titlebar />
-          <div id="infoWrapper">
-            <InfoBox 
-              selectedSong={ this.state.selectedSong } 
-              selectedSongInfo={ this.state.selectedSongInfo } />
-            <SongList
-              spotimy={ this.props.spotimy }
-              onClick={ this.setSelectedSong } />
-          </div>
+      var elements = (
+        <div id="infoWrapper">
+          <InfoBox 
+            selectedSong={ this.state.selectedSong } 
+            selectedSongInfo={ this.state.selectedSongInfo } />
+          <SongList
+            spotimy={ this.props.spotimy }
+            onClick={ this.setSelectedSong } />
         </div>
       );
     }else{
-      var element = (
-        <div id="appWrapper">
-          <Titlebar />
-          <BeginBtn location={this.props.spotimy.getAuthURL()} />
-        </div>
-      )
+      var elements = (
+        <BeginBtn location={this.props.spotimy.getAuthURL()} />
+      );
     }
-    
-    return element;
+
+    return (
+      <div id="appWrapper">
+        <Titlebar />
+        { elements }
+      </div>
+    );
   }
 }

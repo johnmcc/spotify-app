@@ -2,6 +2,10 @@
   box-sizing: border-box;
 }
 
+html, body {
+  height: 100%;
+}
+
 body {
   background: #191414;
   margin: 0;
@@ -19,6 +23,12 @@ body {
   margin: 0;
   padding: 0;
   font-size: 40px;
+}
+
+#footer {
+  background-color: #1DB954;
+  font-family: 'Roboto', sans-serif;
+  padding: 20px 40px;
 }
 
 #app {
@@ -41,6 +51,8 @@ body {
 
 #infoWrapper {
   padding: 0 20px;
+  min-height: 100%;
+  margin-bottom: -51px;
 }
 
 #infoBox {
