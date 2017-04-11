@@ -46,7 +46,7 @@ const InfoBox = ({selectedSong, selectedSongInfo}) => {
           }}
           graph_id="GaugeChart"
           width="60%"
-          height="200px"
+          height="150px"
         />
       </div>
     </div>

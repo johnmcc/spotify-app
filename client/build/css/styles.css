@@ -79,7 +79,7 @@ body {
 #infoBox h2 {
   font-family: 'Marck Script', cursive;
   color: #1DB954;
-  font-size: 36px;
+  font-size: 40px;
   margin-top: 0;
   margin-bottom: 0;
 }
@@ -88,12 +88,13 @@ body {
   margin-top: 15px;
   margin-bottom: 5px;
   font-weight: normal;
-  font-size: 16px;
+  font-size: 24px;
   font-style: italic;
 }
 
 #infoBox h4 {
   font-weight: normal;
+  font-size: 20px;
   margin-top: 0;
   margin-bottom: 20px;
 } 
