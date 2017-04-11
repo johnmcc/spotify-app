@@ -1,5 +1,5 @@
 import React from 'react';
-import Song from './Song.jsx'
+import Song from '../components/Song.jsx'
 
 export default class SongList extends React.Component {
   constructor(props){

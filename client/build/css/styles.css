@@ -67,6 +67,9 @@ body {
 #infoBox #infoTextWrap {
   padding: 20px;
   text-align: left;
+  background: #fff;
+  opacity: 0.85;
+  text-align: center;
 }
 
 #infoBox h2 {
@@ -82,13 +85,26 @@ body {
   margin-bottom: 5px;
   font-weight: normal;
   font-size: 16px;
+  font-style: italic;
 }
 
 #infoBox h4 {
   font-weight: normal;
   margin-top: 0;
-  margin-bottom: 0;
+  margin-bottom: 20px;
 } 
+
+#infoBox h4 span {
+  font-style: italic;
+}
+
+#infoBox #GaugeChart {
+  margin: 0 auto;
+}
+
+#infoBox table {
+  margin: 0 auto !important;
+}
 
 .played {
   cursor: pointer;

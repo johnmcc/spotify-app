@@ -23,26 +23,29 @@ const InfoBox = ({selectedSong, selectedSongInfo}) => {
     backgroundImage: 'url(' + selectedSong.album.images[0].url + ')',
     backgroundSize: 'cover',
     backgroundRepeat: 'no-repeat',
-    backgroundPosition: '50% 50%'
+    backgroundPosition: '50% 50%',
+    width: '80%',
+    margin: '40px auto'
   };
 
   return (
     <div id="infoBox" style={ infoBoxStyle }>
       <div id="infoTextWrap">
         <h2>{ selectedSong.name }</h2>
-        <h3>By { getArtists() }</h3>
-        <h4>From the album { selectedSong.album.name }</h4>
+        <h3>{ getArtists() }</h3>
+        <h4>From the album <span>{ selectedSong.album.name }</span></h4>
 
         <Chart
           chartType="Gauge"
           data={ getData() }
           options={{
             greenColor: "#1DB954",
-            greenFrom: 80, greenTo: 100,
+            greenFrom: 80, 
+            greenTo: 100,
             minorTicks: 5
           }}
           graph_id="GaugeChart"
-          width="50%"
+          width="60%"
           height="200px"
         />
       </div>

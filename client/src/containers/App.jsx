@@ -1,7 +1,7 @@
 import React from 'react';
 import InfoBox from './InfoBox.jsx';
 import SongList from './SongList.jsx';
-import BeginBtn from './BeginBtn.jsx';
+import BeginBtn from '../components/BeginBtn.jsx';
 
 export default class App extends React.Component {
   constructor(props){
