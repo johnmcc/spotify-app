@@ -1,15 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import MainRouter from './components/MainRouter.jsx';
 
-import Spotimy from './Spotimy';
-import App from './containers/App.jsx';
 
 window.onload = function(){
-  var spotimy = new Spotimy();
-  var element = <App spotimy={spotimy} />;
-
   ReactDOM.render(
-    element,
+    <MainRouter />,
     document.getElementById('app')
   );
 };

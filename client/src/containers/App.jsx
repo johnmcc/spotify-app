@@ -1,10 +1,10 @@
 import React from 'react';
 import InfoBox from './InfoBox.jsx';
 import SongList from './SongList.jsx';
-import Titlebar from '../components/Titlebar.jsx';
+import About from '../components/About.jsx';
 import BeginBtn from '../components/BeginBtn.jsx';
 
-export default class App extends React.Component {
+class App extends React.Component {
   constructor(props){
     super(props);
 
@@ -23,7 +23,7 @@ export default class App extends React.Component {
 
   render(){
     if(this.props.spotimy.accessToken){
-      var elements = (
+      var Elements = (
         <div id="infoWrapper">
           <InfoBox 
             selectedSong={ this.state.selectedSong } 
@@ -32,18 +32,13 @@ export default class App extends React.Component {
             spotimy={ this.props.spotimy }
             onClick={ this.setSelectedSong } />
         </div>
-      );
+      )
     }else{
-      var elements = (
-        <BeginBtn location={this.props.spotimy.getAuthURL()} />
-      );
+      var Elements = <BeginBtn location={this.props.spotimy.getAuthURL()} />
     }
 
-    return (
-      <div id="appWrapper">
-        <Titlebar />
-        { elements }
-      </div>
-    );
+    return Elements;
   }
 }
+
+export default App;

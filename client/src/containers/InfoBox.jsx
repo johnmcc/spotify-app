@@ -24,7 +24,7 @@ const InfoBox = ({selectedSong, selectedSongInfo}) => {
     backgroundSize: 'cover',
     backgroundRepeat: 'no-repeat',
     backgroundPosition: '50% 50%',
-    width: '80%',
+    width: '65%',
     margin: '40px auto'
   };
 
