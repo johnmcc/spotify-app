@@ -5,8 +5,7 @@ const Song = ({track, audio_features, onClick}) => {
     return track.artists.map(artist => { return artist.name }).join(" / ");
   };
 
-  const handleClick = (event) => {
-    event.stopPropagation();
+  const handleClick = () => {
     onClick(track, audio_features);
   };
 
