@@ -9,12 +9,12 @@ const InfoBox = ({selectedSong, selectedSongInfo}) => {
   }
 
   const getData = () => {
-    var danceability = parseInt(selectedSongInfo.danceability * 100, 10);
-    var valence = parseInt(selectedSongInfo.valence * 100, 10);
-    var energy = parseInt(selectedSongInfo.energy * 100, 10);
+    const danceability = parseInt(selectedSongInfo.danceability * 100, 10);
+    const valence = parseInt(selectedSongInfo.valence * 100, 10);
+    const energy = parseInt(selectedSongInfo.energy * 100, 10);
 
-    return [ 
-      ['Danceability', 'Happiness', 'Energy'], 
+    return [
+      ['Danceability', 'Happiness', 'Energy'],
       [danceability, valence, energy]
     ];
   }
@@ -40,7 +40,7 @@ const InfoBox = ({selectedSong, selectedSongInfo}) => {
           data={ getData() }
           options={{
             greenColor: "#1DB954",
-            greenFrom: 80, 
+            greenFrom: 80,
             greenTo: 100,
             minorTicks: 5
           }}

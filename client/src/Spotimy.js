@@ -3,33 +3,30 @@ export default class Spotimy {
     this.clientId = "24f59f279b824fe9891b49c10c9e6130";
     this.redirect_uri = "http://spotimy.com:3000";
 
-    var params = this.getHashParams();
-    this.accessToken = params.access_token || null;    
+    const params = this.getHashParams();
+    this.accessToken = params.access_token || null;
   }
 
   getAuthURL(){
-    var url = "https://accounts.spotify.com/authorize?";
-    url += "client_id=" + this.clientId;
-    url += "&response_type=token";
-    url += "&scope=user-read-recently-played";
-    url += "&redirect_uri=" + this.redirect_uri;
-
+    const url = `https://accounts.spotify.com/authorize?
+                client_id=${this.clientId};
+                &response_type=token";
+                &scope=user-read-recently-played
+                &redirect_uri=${this.redirect_uri}`;
     return url;
   }
 
   getRecentlyPlayedUrl() {
-    var url = "https://api.spotify.com/v1/me/player/recently-played";
-    return url;
+    return "https://api.spotify.com/v1/me/player/recently-played";
   }
 
   getSongInfoUrl(ids){
-    var url = "https://api.spotify.com/v1/audio-features/?ids=" + ids;
-    return url;
+    return `https://api.spotify.com/v1/audio-features/?ids=${ids}`;
   }
 
   getHashParams(){
-    var hashParams = {};
-    var e, r = /([^&;=]+)=?([^&;]*)/g,
+    const hashParams = {};
+    let e, r = /([^&;=]+)=?([^&;]*)/g,
       q = window.location.hash.substring(1);
     while ( e = r.exec(q)) {
      hashParams[e[1]] = decodeURIComponent(e[2]);

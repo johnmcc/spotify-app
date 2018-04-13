@@ -13,7 +13,7 @@ const Song = ({track, audio_features, onClick}) => {
     <div className="played" onClick={ handleClick }>
       <p className="song">{ track.name }</p>
       <p className="artist">{ getArtist() }</p>
-    </div> 
+    </div>
   );
 };
 
