@@ -8,11 +8,7 @@ export default class Spotimy {
   }
 
   getAuthURL(){
-    const url = `https://accounts.spotify.com/authorize?
-                client_id=${this.clientId};
-                &response_type=token";
-                &scope=user-read-recently-played
-                &redirect_uri=${this.redirect_uri}`;
+    const url = `https://accounts.spotify.com/authorize?client_id=${this.clientId}&response_type=token&scope=user-read-recently-played&redirect_uri=${this.redirect_uri}`;
     return url;
   }
 

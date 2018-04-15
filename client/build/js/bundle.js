@@ -28245,7 +28245,7 @@ var Spotimy = function () {
   _createClass(Spotimy, [{
     key: "getAuthURL",
     value: function getAuthURL() {
-      var url = "https://accounts.spotify.com/authorize?\n                client_id=" + this.clientId + ";\n                &response_type=token\";\n                &scope=user-read-recently-played\n                &redirect_uri=" + this.redirect_uri;
+      var url = "https://accounts.spotify.com/authorize?client_id=" + this.clientId + "&response_type=token&scope=user-read-recently-played&redirect_uri=" + this.redirect_uri;
       return url;
     }
   }, {
