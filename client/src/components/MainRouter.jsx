@@ -9,7 +9,7 @@ const MainRouter = () => {
   var spotimy = new Spotimy();
 
   return (
-    <Router history={browserHistory} basename={'spotify-app'}>
+    <Router basename={'spotify-app'}>
       <div>
         <div id="titlebar">
           <h1>Spotimy</h1>

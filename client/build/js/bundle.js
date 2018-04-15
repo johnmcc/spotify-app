@@ -24725,7 +24725,7 @@ var MainRouter = function MainRouter() {
 
   return _react2.default.createElement(
     _reactRouterDom.BrowserRouter,
-    { history: browserHistory, basename: 'spotify-app' },
+    { basename: 'spotify-app' },
     _react2.default.createElement(
       'div',
       null,
