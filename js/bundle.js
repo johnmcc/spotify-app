@@ -24722,11 +24722,10 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 var MainRouter = function MainRouter() {
   var spotimy = new _Spotimy2.default();
-  var hashHistory = _reactRouterDom.BrowserRouter.hashHistory;
 
   return _react2.default.createElement(
     _reactRouterDom.BrowserRouter,
-    { history: hashHistory },
+    { history: browserHistory, basename: 'spotify-app' },
     _react2.default.createElement(
       'div',
       null,
@@ -24746,7 +24745,7 @@ var MainRouter = function MainRouter() {
             null,
             _react2.default.createElement(
               _reactRouterDom.Link,
-              { to: '/spotify-app/' },
+              { to: '/' },
               'Home'
             )
           ),
@@ -24755,16 +24754,16 @@ var MainRouter = function MainRouter() {
             null,
             _react2.default.createElement(
               _reactRouterDom.Link,
-              { to: '/spotify-app/about' },
+              { to: '/about' },
               'About'
             )
           )
         )
       ),
-      _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: '/spotify-app/', render: function render() {
+      _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: '/', render: function render() {
           return _react2.default.createElement(_App2.default, { spotimy: spotimy });
         } }),
-      _react2.default.createElement(_reactRouterDom.Route, { path: '/spotify-app/about', component: _About2.default })
+      _react2.default.createElement(_reactRouterDom.Route, { path: '/about', component: _About2.default })
     )
   );
 };
