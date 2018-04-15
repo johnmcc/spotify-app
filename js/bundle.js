@@ -12717,7 +12717,7 @@ var _MainRouter2 = _interopRequireDefault(_MainRouter);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 window.onload = function () {
-  _reactDom2.default.render(_react2.default.createElement(_MainRouter2.default, { basename: '/spotify-app' }), document.getElementById('app'));
+  _reactDom2.default.render(_react2.default.createElement(_MainRouter2.default, { history: hashHistory }), document.getElementById('app'));
 };
 
 /***/ }),
@@ -24745,7 +24745,7 @@ var MainRouter = function MainRouter() {
             null,
             _react2.default.createElement(
               _reactRouterDom.Link,
-              { to: '/spotify-app/' },
+              { to: '/' },
               'Home'
             )
           ),
@@ -24754,7 +24754,7 @@ var MainRouter = function MainRouter() {
             null,
             _react2.default.createElement(
               _reactRouterDom.Link,
-              { to: '/spotify-app/about' },
+              { to: '/about' },
               'About'
             )
           )
