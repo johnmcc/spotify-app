@@ -24761,10 +24761,10 @@ var MainRouter = function MainRouter() {
           )
         )
       ),
-      _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: '/', render: function render() {
+      _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: '/spotify-app/', render: function render() {
           return _react2.default.createElement(_App2.default, { spotimy: spotimy });
         } }),
-      _react2.default.createElement(_reactRouterDom.Route, { path: '/about', component: _About2.default })
+      _react2.default.createElement(_reactRouterDom.Route, { path: '/spotify-app/about', component: _About2.default })
     )
   );
 };

@@ -20,8 +20,8 @@ const MainRouter = () => {
           </ul>
         </div>
 
-        <Route exact path="/" render={() => <App spotimy={spotimy} /> } />
-        <Route path="/about" component= { About } />
+        <Route exact path="/spotify-app/" render={() => <App spotimy={spotimy} /> } />
+        <Route path="/spotify-app/about" component= { About } />
       </div>
     </Router>
   );
