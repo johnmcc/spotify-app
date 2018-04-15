@@ -24745,7 +24745,7 @@ var MainRouter = function MainRouter() {
             null,
             _react2.default.createElement(
               _reactRouterDom.Link,
-              { to: '/' },
+              { to: '/spotify-app/' },
               'Home'
             )
           ),
@@ -24754,7 +24754,7 @@ var MainRouter = function MainRouter() {
             null,
             _react2.default.createElement(
               _reactRouterDom.Link,
-              { to: '/about' },
+              { to: '/spotify-app/about' },
               'About'
             )
           )
