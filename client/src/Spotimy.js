@@ -1,7 +1,7 @@
 export default class Spotimy {
   constructor(){
     this.clientId = "24f59f279b824fe9891b49c10c9e6130";
-    this.redirect_uri = "http://spotimy.com:3000";
+    this.redirect_uri = "https://johnmcc.github.io/spotify-app";
 
     const params = this.getHashParams();
     this.accessToken = params.access_token || null;
