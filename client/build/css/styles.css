@@ -42,7 +42,7 @@ body {
 }
 
 #titlebar li a:hover, #titlebar li a:active, #titlebar li a:focus {
-  
+
 }
 
 #footer {
@@ -82,7 +82,7 @@ body {
 }
 
 #aboutWrapper a, #aboutWrapper a:link, #aboutWrapper a:visited {
-  background: url(/images/GitHub-Mark-64px.png) no-repeat center left;
+  background: url(/spotify-app/images/GitHub-Mark-64px.png) no-repeat center left;
   padding-left: 24px;
   background-size: 18px;
   color: #000;
@@ -110,7 +110,7 @@ body {
   bottom: 0;
   right: 0;
   position: absolute;
-  z-index: -1;   
+  z-index: -1;
 }
 
 #infoBox img {
@@ -146,7 +146,7 @@ body {
   font-size: 20px;
   margin-top: 0;
   margin-bottom: 20px;
-} 
+}
 
 #infoBox h4 span {
   font-style: italic;
@@ -190,4 +190,3 @@ p.artist {
   margin-top: 5px;
   margin-bottom: 10px;
 }
-
