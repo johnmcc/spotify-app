@@ -5,7 +5,7 @@ import MainRouter from './components/MainRouter.jsx';
 
 window.onload = function(){
   ReactDOM.render(
-    <MainRouter basename={'/spotify-app'} />,
+    <MainRouter history={ hashHistory } />,
     document.getElementById('app')
   );
 };
