@@ -4,10 +4,10 @@ import About from './About.jsx';
 import Spotimy from '../Spotimy';
 
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
-import { hashHistory } from 'react-router';
 
 const MainRouter = () => {
   var spotimy = new Spotimy();
+  let hashHistory = Router.hashHistory;
 
   return (
     <Router history={ hashHistory }>
