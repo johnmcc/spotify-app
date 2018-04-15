@@ -8,7 +8,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "deploy": "gh-pages -d client/build"
   },
-  "homepage": "http://johnmcc.github.io/spotify_app",
+  "homepage": "http://johnmcc.github.io/spotify-app",
   "author": "",
   "license": "ISC",
   "devDependencies": {
