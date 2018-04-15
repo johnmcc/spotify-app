@@ -12717,7 +12717,7 @@ var _MainRouter2 = _interopRequireDefault(_MainRouter);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 window.onload = function () {
-  _reactDom2.default.render(_react2.default.createElement(_MainRouter2.default, null), document.getElementById('app'));
+  _reactDom2.default.render(_react2.default.createElement(_MainRouter2.default, { basename: '/spotify-app' }), document.getElementById('app'));
 };
 
 /***/ }),
